@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Get MDL -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/material.css">
+    <link rel="stylesheet" href="css/getmdl-select.min.css">
+    <script defer src="js/material.min.js"></script>
+    <script defer src="js/getmdl-select.min.js"></script>
+    <!-- End Of MDL -->
+    
+    <!-- The general style of Contact Form-->
+    <link rel="stylesheet" href="css/contact-form-style.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src='js/ajax.js'></script>
+    <title>Responsive Ajax Contact Form</title> 
+</head>
+<body>
+    
+    <!-------------------------------Start The Body If There form---------------------->
+        <div class="mdl-grid">
+        <!---------------- Start the Contact Form -------------------------->
+        <div class="form-container mdl-cell mdl-cell--8-col">
+            
+           <!-- ------------Contact Heading--------------->
+            <h4>Contact Us</h4>
+            <!-- ----------End Contact Headings------------->                                                           
+        <form class="contact-form" id="contact" onsubmit="submitForm(); return false;" class="mdl-cell mdl-cell--10-col form" enctype="multipart/form-data">
+            
+            <!------------------- Start Full name  ------------->
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
+            <input class="mdl-textfield__input" id="name" autocomplete="off">
+            <label class="mdl-textfield__label" for="name">Full name</label>
+            <!---- Name Tooltip ---->
+             <div class="mdl-tooltip mdl-tooltip--large" for="name">
+               Your Full name
+             </div>
+          </div>
+            <!-- ------------End  Full name  -------------------->
+            
+            
+            
+            <!----------------------------------- Start Email  ---------------------------->
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
+            <input class="mdl-textfield__input" id="email" autocomplete="off">
+            <label class="mdl-textfield__label" for="email">Email</label>
+             <!-- Email Tooltip -->
+             <div class="mdl-tooltip mdl-tooltip--large" for="email">
+               Your Valid Email Address
+             </div>
+          </div>
+            <!---------------------------------End  of Email ------------------------------>
+            
+            <!----------------------------------- Start Phone Number  ---------------------------->
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
+            <input class="mdl-textfield__input" id="phone" autocomplete="off">
+            <label class="mdl-textfield__label" for="phone">Phone Number</label>
+             <!-- Email Tooltip -->
+             <div class="mdl-tooltip mdl-tooltip--large" for="phone">
+               Your Valid Phone Number
+             </div>
+          </div>
+            <!---------------------------------End  of Phone Number ------------------------------>
+            
+            <!---------------------------------- Select Subject------------------------------------------>
+            <div class="mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fullwidth">
+                <input class="mdl-textfield__input" type="text" id="subject" id="sample1" readonly tabIndex="-1">
+                <!---- Name Tooltip ---->
+                 <div class="mdl-tooltip mdl-tooltip--large" for="subject">
+                   Select a Subject
+                 </div>
+                <label for="subject" class="mdl-textfield__label">Subject</label>
+                <ul for="subject" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                    <li class="mdl-menu__item">Support And ticket</li>
+                    <li class="mdl-menu__item">general information</li>
+                    <li class="mdl-menu__item">payment problems</li>
+                </ul>
+            </div>
+        
+            <!------------------------------------End Of Select Subject--------------------------------------->
+            <!------------------------------------Start File Upload------------------------------------------->
+              <div class="upload-file mdl-cell mdl-cell--6-col mdl-textfield mdl-js-textfield mdl-textfield--file">
+                    <input class="mdl-textfield__input" placeholder="File" type="text" id="uploadFile" readonly/>
+                    <div class="mdl-button mdl-button--primary mdl-button--icon mdl-button--file">
+                      <i class="material-icons">attach_file</i><input type="file" id="uploadBtn">
+                    </div>
+             </div>
+            <div class="mdl-tooltip mdl-tooltip--large" for="uploadFile">
+                   Click on icon to upload File
+            </div>
+            <!-------------------------------------End Of File Upload----------------------------------------->
+            
+            
+          
+            <!------------------Start Message Section (Text Area)----------------------->
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--6-col">
+              <textarea class="mdl-textfield__input" id="message" ></textarea>
+            <label class="mdl-textfield__label" for="message">Your message</label>
+            <!-- Message Tooltip -->
+             <div class="mdl-tooltip mdl-tooltip--large" for="message">
+               Message at least 20 characters
+             </div>
+          </div>
+            <!-------------------- End  Message Section (Text Area)---------------------->
+            
+            <!----------------------------Start Google recaptcha-------------------------->
+            <div id="gcaptcha">
+            <div class="mdl-cell mdl-cell--8-col g-recaptcha" data-sitekey="6LeuyiATAAAAAAusLUerFqwFcuccOU6vLsIFU2hs"></div>
+            </div>
+
+            
+            <!----------------------------End Google Recaptcha------------------------------>
+                                                                                                            
+            <!--------------------------Start the Submit Button-------------------------->
+            <p id="spinner">
+                <input class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--colored mdl-cell mdl-cell--8-col" id="mybtn" type="submit" value="Submit Form">
+            </p>
+            <div id="status" class="center-text mdl-cell mdl-cell--10-col"></div>
+            <!---------------------------End the Submit Button---------------------------->
+        </form>
+    </div>
+    <!-- END Of the Contact Form -->
+    </div>
+    <!-- This is the Jquery File ; if you already have jquery On your website , you can remove this line-->
+    <script src="js/jquery.js"></script>
+    <!-------------------------- End of the jquery----------------------------------->
+    <script src="js/scripts.js"></script>
+    
+    <!------------------------ End of the Contact Form Body------------------------------------>
+    
+   </body> 
+</html>
