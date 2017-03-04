@@ -1,7 +1,12 @@
 <?php
+/*
+* Item : PHP & AJAX contact form
+* Author : Kouloughli Hemza
+* Time : 2/03/2017
+*/
 ob_start();
 /* Put Here email where you will receive Contact message*/
-$yourEmail = "php7@outlook.com"; // <== Your Email
+$yourEmail = "email@email.com"; // <== Your Email
 $secret = '6LeuyiATAAAAAH4AWVx9CbFmqRzmNB7EbqHDLgTu'; // <==Your recaptcha Privte Key
 /*---------------------------------------*/
 
