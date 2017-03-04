@@ -7,7 +7,8 @@
 ob_start();
 /* Put Here email where you will receive Contact message*/
 $yourEmail = "email@email.com"; // <== Your Email
-$secret = '6LeuyiATAAAAAH4AWVx9CbFmqRzmNB7EbqHDLgTu'; // <==Your recaptcha Privte Key
+$secret = 'Add Recaptcha Secret Key Here'; // <==Your recaptcha Privte Key
+// You can get Key from here: https://www.google.com/recaptcha/admin
 /*---------------------------------------*/
 
 // ---------------------Start the recaptcha ------------------------------------//
